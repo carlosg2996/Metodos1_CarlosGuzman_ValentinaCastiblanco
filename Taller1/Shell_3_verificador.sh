@@ -2,25 +2,27 @@
 
 pass=0
 
-read -p "numero: " v1
-
 function checkvalue(){
-	echo Es $v1
-}
+	if [ $var -eq 0 ] || [ $var -eq 1 ]; then
+		pass=1
+		echo "Es "$var
 
-while [ $pass -eq 0 ]
-do
-	if  [ $v1 -eq 0 ]; then
-		pass=1
-		checkvalue
-	elif [ $v1 -eq 1 ]; then
-		pass=1
-		checkvalue
 	else
 		echo "Por favor intente de nuevo"
 		exit 1
-fi
-done
+	fi
+}
+
+while read var;
+do
+	if  [ $pass -eq 0 ]; then
+		checkvalue $var
+
+	else
+		exit 1
+	fi
+done <<< $1
+
 
 
 
