@@ -20,4 +20,3 @@ else
 	echo El factorial de $1 es $factorial
 fi
 
-
