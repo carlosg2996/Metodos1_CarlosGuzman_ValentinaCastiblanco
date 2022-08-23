@@ -1,0 +1,11 @@
+Ruta_archivo_de_texto_1.txt
+Ruta_archivo_de_texto_2.txt
+Ruta_archivo_de_texto_3.txt
+Ruta_archivo_de_texto_4.txt
+Ruta_archivo_de_texto_5.txt
+Ruta_archivo_de_texto_6.txt
+Ruta_archivo_de_texto_7.txt
+Ruta_archivo_de_texto_8.txt
+Ruta_archivo_de_texto_9.txt
+Ruta_archivo_de_texto_10.txt
+
