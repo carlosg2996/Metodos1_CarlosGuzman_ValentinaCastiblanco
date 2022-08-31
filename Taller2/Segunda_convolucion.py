@@ -5,14 +5,16 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import sys
-sys.path.append("\.spyder-py3\Taller_2\Convolucion")
-import Convolucion as s
 
 
+
+x = np.linspace(-10,10,50)
 h = 0.05
-f = s.cero
-M=np.array([-1,0,1])
+M=np.array([1,-2,1])
+
+expo = lambda x: 1/np.sqrt(1+np.exp(-x**2))
+
+f = expo(x)
 
 i=0
 msum = []
@@ -30,7 +32,7 @@ msum = np.array(msum)
 
 derdos =[]
 for i in msum:
-    derdos.append(i/(4*(h**2)))
+    derdos.append(i/((h**2)))
  
 dfdos= np.array(derdos)
 
@@ -38,7 +40,7 @@ dfdos= np.array(derdos)
 nuevo=np.insert(dfdos,0,np.zeros(M.size-2))
 cero=np.insert(nuevo,nuevo.size,np.zeros(M.size-2))
 
-x = np.linspace(-10,10,(len(s.x)-1))
+x = np.linspace(-10,10,(len(x)-1))
 
 plt.figure()
 plt.grid()
